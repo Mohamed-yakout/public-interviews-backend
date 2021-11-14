@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_14_055139) do
+ActiveRecord::Schema.define(version: 2021_11_14_060035) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,4 +30,17 @@ ActiveRecord::Schema.define(version: 2021_11_14_055139) do
     t.index ["status"], name: "index_accounts_on_status"
   end
 
+  create_table "transactions", force: :cascade do |t|
+    t.bigint "sender_id"
+    t.bigint "receiver_id"
+    t.decimal "amount", precision: 8, scale: 2, default: "0.0"
+    t.string "currency", default: "AED"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["receiver_id"], name: "index_transactions_on_receiver_id"
+    t.index ["sender_id"], name: "index_transactions_on_sender_id"
+  end
+
+  add_foreign_key "transactions", "accounts", column: "receiver_id"
+  add_foreign_key "transactions", "accounts", column: "sender_id"
 end
