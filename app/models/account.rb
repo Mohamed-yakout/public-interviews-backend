@@ -5,6 +5,8 @@
 # Table name: accounts
 #
 #  id           :bigint           not null, primary key
+#  balance      :decimal(8, 2)    default(0.0)
+#  currency     :string           default("AED")
 #  email        :string
 #  first_name   :string
 #  last_name    :string
