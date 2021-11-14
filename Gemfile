@@ -10,6 +10,9 @@ gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 4.1'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
 
+# Use Active Model Serializers for data serialization
+gem 'active_model_serializers'
+
 group :development, :test do
   gem 'dotenv-rails'
   gem 'factory_bot_rails'
