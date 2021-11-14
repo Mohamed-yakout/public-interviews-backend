@@ -4,6 +4,7 @@
 
 * To sign_up on this API, there is outside service to sign_up.
 * Update the account to convert it to verified should be by admin.
+* All transactions will be through one currenct `AED`.
 
 ### How to install the transactions api on the server.
 
@@ -83,6 +84,8 @@
 1. Limit result of transactions by using pagination, [will_paginate gem](https://github.com/mislav/will_paginate) can be installed to limit the results.
 
 2. Adding filter on transactions request by date range using `ransack gem`.
+
+3. Handling different currency through using `Money gem`. 
 
 ### Run test cases
 
