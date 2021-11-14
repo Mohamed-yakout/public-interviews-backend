@@ -21,7 +21,7 @@
 #  fk_rails_...  (sender_id => accounts.id)
 #
 class TransactionSerializer < ActiveModel::Serializer
-  attributes :id, :amount, :currency
+  attributes :id, :amount, :currency, :created_at
   has_one :sender
   has_one :receiver
 end

@@ -27,7 +27,6 @@ class Account < ApplicationRecord
   # Include default devise modules. Others available are:
   # :registerable, :validatable:rememberable, :recoverable, :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable, :validatable
-  # has_secure_password
 
   has_many :sent_transactions, class_name: "Transaction", foreign_key: :sender_id, dependent: :destroy
   has_many :received_transactions, class_name: "Transaction", foreign_key: :receiver_id, dependent: :destroy
