@@ -28,8 +28,10 @@ FactoryBot.define do
     first_name { Faker::Name.first_name }
     last_name { Faker::Name.last_name }
     email { Faker::Internet.email }
-    phone_number { Faker::PhoneNumber.cell_phone_in_e164 }
+    phone_number { Faker::PhoneNumber.cell_phone_in_e164[0...15] }
+    password { Faker::Internet.password }
+    balance { 100.0 }
 
-    status { 0 }
+    status { "verified" }
   end
 end

@@ -39,7 +39,7 @@ class Account < ApplicationRecord
 
   validates :phone_number, format: { with: /\A\+\d{11,14}\z/, message: "Phone format should be as +12124567890"  },
             uniqueness: { case_sensitive: false },
-            length: { minimum: 11, maximum: 14 }
+            length: { minimum: 11, maximum: 15 }
 
   validates :balance, presence: true, numericality: { greater_than_or_equal_to: 0.0 }
 

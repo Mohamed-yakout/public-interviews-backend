@@ -51,7 +51,8 @@ class Transaction < ApplicationRecord
         self.receiver.deposit(self.amount)
       end
     rescue
-      raise ActiveRecord::RecordInvalid.new(self)
+      raise ActiveRecord::Rollback
+      # raise ActiveRecord::RecordInvalid.new(self)
     end
   end
 

@@ -22,9 +22,9 @@
 #
 FactoryBot.define do
   factory :transaction do
-    sender { nil }
-    receiver { nil }
-    amount { "9.99" }
-    currency { "MyString" }
+    sender { create(:account) }
+    receiver { create(:account) }
+    amount { 10.50 }
+    currency { "AED" }
   end
 end
