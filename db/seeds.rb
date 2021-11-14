@@ -14,19 +14,19 @@ if Account.count.zero?
  email: "mohamed_pay@mailinator.com",
  status: "verified",
  balance: 0.0,
- currency: "AED"},
+ currency: "AED", password: "test1234"},
  {first_name: "Ahmed",
 last_name: "Ahmed",
 phone_number: "+9715353535353",
 email: "ahmad_pay@mailinator.com",
 status: "verified",
 balance: 0.0,
-currency: "AED"},
+currency: "AED", password: "test1234"},
 {first_name: "Hassan",
 last_name: "Hassan",
 phone_number: "+9715454545454",
 email: "hassan_pay@mailinator.com",
 status: "verified",
 balance: 0.0,
-currency: "AED"}])
+currency: "AED", password: "test1234"}])
 end

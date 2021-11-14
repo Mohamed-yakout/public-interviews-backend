@@ -4,16 +4,18 @@
 #
 # Table name: accounts
 #
-#  id           :bigint           not null, primary key
-#  balance      :decimal(8, 2)    default(0.0)
-#  currency     :string           default("AED")
-#  email        :string
-#  first_name   :string
-#  last_name    :string
-#  phone_number :string
-#  status       :integer          default("pending"), not null
-#  created_at   :datetime         not null
-#  updated_at   :datetime         not null
+#  id                 :bigint           not null, primary key
+#  auth_token         :string
+#  balance            :decimal(8, 2)    default(0.0)
+#  currency           :string           default("AED")
+#  email              :string
+#  encrypted_password :string           default("")
+#  first_name         :string
+#  last_name          :string
+#  phone_number       :string
+#  status             :integer          default("pending"), not null
+#  created_at         :datetime         not null
+#  updated_at         :datetime         not null
 #
 # Indexes
 #
